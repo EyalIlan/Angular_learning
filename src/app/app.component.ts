@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   loadedPosts = [];
 
   constructor(private http: HttpClient) {}
-
+  //hello world
   ngOnInit() {}
 
   onCreatePost(postData: { title: string; content: string }) {
