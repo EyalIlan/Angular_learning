@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  loadedPosts = [];
+  loadedPosts:any = [];
 
   constructor(private http: HttpClient) {}
   //hello world
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
         'https://api.chucknorris.io/jokes/random'
       )
       .subscribe(responseData => {
-        console.log(responseData);
+        this.loadedPosts.push(responseData)
       });
   }
 
